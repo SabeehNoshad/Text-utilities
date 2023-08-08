@@ -1,9 +1,21 @@
 import './App.css';
-// import About from './Components/About';
 import Navbar from './Components/Navbar';
 import React,{useState} from 'react';
 import Textarea from './Components/Textarea';
 import Alert from './Components/Alert';
+
+// import {
+//   BrowserRouter as Router,
+ 
+//   Route,
+//   Routes as ReactRoutes,
+ 
+// } from "react-router-dom";
+
+
+
+
+
 
 
 
@@ -20,6 +32,9 @@ function App() {
     setBtnText('Enable Light Mode');
    document.body.style.backgroundColor = '#032353';
    showAlert('DarkMode Enabled','success');
+   setInterval(() => {
+    document.title="Text (1)"
+   }, 1500);
     
   }
   else {
@@ -29,7 +44,7 @@ function App() {
    showAlert('LightMode Enabled','success');
  }
 }
-const showAlert=(message,Type)=>{
+const showAlert=(message,Type)=>{ 
   setAlert({
     msg:message,
     type:Type
@@ -42,16 +57,12 @@ const showAlert=(message,Type)=>{
 }
   return (
     <>
-  <Navbar title ="Text utilities"  About = "About Us" mode={mode} togglemode={togglemode} button={BtnTxt} />
-  <Alert alert={alert} showAlert={showAlert} />
-  <div className='container my-2 '>
- <Textarea heading ="Enter the Text below" mode={mode} showalert={showAlert} />
- {/* <Searchword mode={mode}/> */}
-  {/* <About /> */}
-  </div>
- 
+    <Navbar title ="Text utilities"  mode={mode} togglemode={togglemode} button={BtnTxt} />
+    <Alert alert={alert} showAlert={showAlert} />
+          <div className='container my-2 '>
+            <Textarea heading ="Enter the Text below" mode={mode} showalert={showAlert} /> 
+             </div>
      </>
-  );
-}
+  );}
 
 export default App;
