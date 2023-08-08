@@ -25,7 +25,7 @@ export default function Searchword(props) {
 
   return (
     <div className="container mt-5" style={{backgroundColor : props.mode ==='Dark'? '#032353':'white', color: props.mode === 'Dark'?'white':'black'}}>
-    <h4 >Word Search in Paragraph <button className="btn btn-primary "onClick={clearfield} >Clear</button></h4>
+    <h4 >Word Search in Paragraph <button className="btn btn-primary my-1"onClick={clearfield} >Clear</button></h4>
     
     <div className="mb-3 my-1"  >
       <input

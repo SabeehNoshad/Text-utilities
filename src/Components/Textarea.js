@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import Searchword from './Searchword';
 
 
@@ -37,9 +37,9 @@ export default function Textarea(props) {
    
   return (
     <>
-    <h1 style={{backgroundColor : props.mode ==='Dark'? '#032353':'white',color: props.mode === 'Dark'?'white':'black'}}>{props.heading}
+    <h1 style={{backgroundColor : props.mode ==='Dark'? '#032353':'white',color: props.mode === 'Dark'?'white':'black',background :props.color =='danger'?'#0d6efd':'white'}}>{props.heading}
     
-    <button className="btn btn-primary mx-1" onClick={handleUpClick}>UpperCase</button> 
+    <button className="btn btn-primary mx-1 my-2" onClick={handleUpClick} >UpperCase</button> 
     <button className="btn btn-primary mx-1" onClick={lowerCase}>LowerCase</button>
     <button className="btn btn-primary mx-1" onClick={clearText}>Clear</button>
     </h1>
@@ -51,8 +51,8 @@ export default function Textarea(props) {
         
 <div className='container my-2'style={{backgroundColor : props.mode ==='Dark'? '#032353':'white',color: props.mode === 'Dark'?'white':'black'}} >
 <h2>Your Text Summary</h2>
-<p>{text.split(" ").length} words & {text.length} characters</p>
-<p>{0.08 *text.split(" ").length} minutes to read</p>
+<p>{text.split(/\s+\n/).length} words & {text.length} characters</p>
+<p>{0.08 *text.split(/\s+\n/).length} minutes to read</p>
 
 <h3 style={{backgroundColor : props.mode ==='Dark'? '#032353':'white',color: props.mode === 'Dark'?'white':'black'}}>Preview</h3>
 <div className='container' style={{overflow: text.auto}}>
@@ -60,7 +60,7 @@ export default function Textarea(props) {
 </div>
 </div>
 
-<Searchword text={text} mode={props.mode} alert={props.alert} showAlert={props.showalert} /> 
+<Searchword text={text} mode={props.mode}  showAlert={props.showalert} /> 
 
 </>
 

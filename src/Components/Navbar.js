@@ -19,10 +19,12 @@ export default function Navbar(props) {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
          
-      {/* <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit" onClick={search}>Search</button>
-      </form> */}
+    <div className='d-flex'>
+  <div className='bg-primary rounded mx-2' onClick={()=>{props.colr('primary')}} style={{height:'15px', width:'15px'}}></div>
+  <div className='bg-success rounded mx-2' onClick={()=>{props.colr('success')}} style={{height:'15px', width:'15px'}}></div>
+  <div className='bg-danger rounded mx-2' onClick={()=>{props.colr('danger')}} style={{height:'15px', width:'15px'}}></div>
+  <div className='bg-warning rounded mx-2' onClick={()=>{props.colr('warning')}} style={{height:'15px', width:'15px'}}></div>
+</div> 
       
    <div className={`form-check form-switch text-${ props.mode ==='Dark'? 'light':'Dark'}`}>
       
