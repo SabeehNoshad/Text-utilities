@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Text-utilities/static/css/main.932cf655.css",
+    "main.js": "/Text-utilities/static/js/main.95146dc4.js",
+    "static/media/icons8-logo.svg": "/Text-utilities/static/media/icons8-logo.e03ca3cbd6cfef62e024bb59edae7955.svg",
+    "index.html": "/Text-utilities/index.html",
+    "main.932cf655.css.map": "/Text-utilities/static/css/main.932cf655.css.map",
+    "main.95146dc4.js.map": "/Text-utilities/static/js/main.95146dc4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.932cf655.css",
+    "static/js/main.95146dc4.js"
+  ]
+}
